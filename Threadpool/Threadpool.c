@@ -92,7 +92,7 @@ void* scheduler(void* voidPool) {
         
         Task* tmp = pool->chainHead;
         while(tmp != NULL) {
-            //printf("cjeck \n");
+            //printf("check \n");
             if(!tmp->isRunning && tmp->deadline != DONTCARE) {
                 time_t delta = now - tmp->addedTime;
                 if(delta >= tmp->deadline) {
